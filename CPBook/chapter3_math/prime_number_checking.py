@@ -29,7 +29,7 @@ def is_prime_updated(number):
     if number <= 1:
         return False
     else:
-        range_limit = int(math.sqrt(number))
+        range_limit = math.ceil(math.sqrt(number))
         for i in range(2, range_limit):
             if number % i == 0:
                 return False
