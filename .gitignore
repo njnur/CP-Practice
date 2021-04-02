@@ -111,3 +111,6 @@ dmypy.json
 
 # Virtual Environment
 venv/
+
+# VS Code IDE Folders
+.vscode
