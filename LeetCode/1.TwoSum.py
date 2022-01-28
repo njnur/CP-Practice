@@ -20,7 +20,7 @@ class Solution:
         return None
 
     @staticmethod
-    def two_sum_hash_table(nums: List[int], target: int) -> Any:
+    def two_sum_hash_map(nums: List[int], target: int) -> Any:
         hash_table = {}
 
         for i in range(len(nums)):
