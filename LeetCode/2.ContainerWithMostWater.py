@@ -20,15 +20,13 @@ class Solution:
         first_index = 0
         last_index = len(height) - 1
 
-        for _ in range(0, len(height)):
+        while last_index > first_index:
             area = min(height[first_index], height[last_index]) * (last_index - first_index)
-            if area > max_area:
-                max_area = area
-
-            if height[first_index] < height[last_index]:
+            max_area = max(area, max_area)
+            if height[last_index] >= height[first_index]:
                 first_index += 1
-            elif area > max_area and height[first_index] > height[last_index]:
-                last_index += 1
+            else:
+                last_index -= 1
 
         return max_area
 
