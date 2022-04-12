@@ -41,13 +41,18 @@ class Solution:
         s_last_index = len(s) - 1
         t_last_index = len(t) - 1
         s_skip = 0
+        t_skip = 0
+
+        for s_last_index in range(s_last_index, 0, -1):
+            pass
 
         while s_last_index >= 0 or t_last_index >= 0:
             if s[s_last_index] == '#' or t[t_last_index] == '#':
                 if s[s_last_index] == '#':
                     s_skip += 1
 
-
+            else:
+                pass
 
         return True
 
