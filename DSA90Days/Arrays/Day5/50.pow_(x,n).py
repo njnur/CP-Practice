@@ -1,4 +1,7 @@
 class Solution:
+    """
+    Leetcode problem solution of https://leetcode.com/problems/powx-n/
+    """
     def fast_exponentiation(self, x: float, n: float) -> float:
         if n == 0:
             return 1.0
