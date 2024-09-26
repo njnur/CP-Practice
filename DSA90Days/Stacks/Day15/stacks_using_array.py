@@ -51,9 +51,6 @@ class StackUsingArray:
             raise IndexError("Can not peek an empty stack")
         return self.stack[-1]
 
-    def __str__(self) -> str:
-        return f"{self.stack}"
-
 
 if __name__ == "__main__":
     stack_obj = StackUsingArray()
