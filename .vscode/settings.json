@@ -1,0 +1,31 @@
+{
+    // Enable Pylint as the linter
+    "python.linting.pylintEnabled": true,
+    // Enable linting in general
+    "python.linting.enabled": true,
+    // Run linter on file save automatically
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    // Set Pylint as the formatter for Python files
+    "python.formatting.provider": "pylint",
+    // Custom Pylint arguments to mimic PyCharm linting behavior
+    "python.linting.pylintArgs": [
+        "--disable=C0111", // Disable missing docstring check
+        "--disable=too-many-arguments", // Disable warnings about many function arguments
+        "--disable=too-many-locals", // Disable warnings about too many local variables
+        "--max-line-length=120", // Set maximum allowed line length (120 mimics PyCharm's default)
+        "--disable=C0103", // Disable naming convention checks
+        "--disable=W0703", // Allow broad exceptions
+        "--enable=W0201", // Enable attribute-defined-outside-init warning
+        "--enable=E1101", // Enable checks for missing class members
+        "--disable=R0914" // Disable too-many-locals
+    ],
+    // Automatically sort imports using isort on save
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    // Automatically format code on save
+    "editor.formatOnSave": true,
+}
